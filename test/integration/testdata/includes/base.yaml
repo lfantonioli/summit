@@ -1,0 +1,17 @@
+packages:
+  - name: htop
+  - name: git
+  - name: openssh
+
+services:
+  - name: sshd
+    enabled: true
+    runlevel: default
+
+users:
+  - name: testuser
+    groups: [users]
+
+configs:
+  - path: /etc/motd
+    content: "Base system configuration"

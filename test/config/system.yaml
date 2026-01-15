@@ -1,0 +1,37 @@
+packages:
+  - name: alpine-base
+  - name: openrc
+  - name: busybox
+  - name: openssh
+
+services:
+  - name: sshd
+    enabled: true
+    runlevel: default
+  - name: cron
+    enabled: false
+    runlevel: default
+  - name: networking
+    enabled: true
+    runlevel: default
+
+users:
+  - name: root
+    groups:
+      - root
+  - name: anuser
+    groups:
+      - users
+      - wheel
+
+configs:
+  - path: /etc/hostname
+    content: |
+      my-alpine-system
+  - path: /etc/resolv.conf
+    content: |
+      nameserver 8.8.8.8
+      nameserver 8.8.4.4
+  - path: /etc/motd
+    content: |
+      Welcome to my custom Alpine system!

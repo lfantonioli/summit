@@ -1,0 +1,37 @@
+includes:
+  - common-base.yaml
+
+packages:
+  - name: alpine-baselayout
+  - name: alpine-baselayout-data
+  - name: alpine-keys
+  - name: alpine-release
+  - name: apk-tools
+  - name: busybox
+  - name: busybox-binsh
+  - name: ca-certificates-bundle
+  - name: ifupdown-ng
+  - name: libcap2
+  - name: libcrypto3
+  - name: libedit
+  - name: libncursesw
+  - name: libssl3
+  - name: musl
+  - name: musl-utils
+  - name: ncurses-terminfo-base
+  - name: openrc
+  - name: openssh
+  - name: openssh-client-common
+  - name: openssh-client-default
+  - name: openssh-keygen
+  - name: openssh-server
+  - name: openssh-server-common
+  - name: openssh-server-common-openrc
+  - name: openssh-sftp-server
+  - name: scanelf
+  - name: ssl_client
+  - name: zlib
+configs:
+  - path: /etc/test_file.txt
+    content: |
+      Hello from summit!

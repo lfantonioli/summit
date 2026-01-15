@@ -1,0 +1,9 @@
+includes:
+  - common-base.yaml
+
+packages:
+  - name: htop
+
+configs:
+  - path: /tmp/testfile
+    content: "Integration test file"

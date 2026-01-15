@@ -1,0 +1,13 @@
+packages:
+  - name: sway
+  - name: foot
+  - name: firefox
+
+services:
+  - name: elogind
+    enabled: true
+    runlevel: default
+
+users:
+  - name: testuser
+    groups: [video, audio]

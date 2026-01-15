@@ -1,0 +1,22 @@
+includes:
+  - ../advanced-base.yaml
+  - ../../common-base.yaml
+
+packages:
+  - name: vim
+
+users:
+  - name: devuser
+    groups: [wheel, docker]
+
+ignored-configs:
+  - "/etc/network/interfaces"
+
+user-packages:
+  - user: devuser
+    pipx:
+      - pytest
+      - mypy
+    npm:
+      - prettier
+      - typescript

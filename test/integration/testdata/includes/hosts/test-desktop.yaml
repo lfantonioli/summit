@@ -1,0 +1,17 @@
+includes:
+  - ../base.yaml
+  - ../desktop.yaml
+  - ../../common-base.yaml
+
+# Host-specific overrides/additions
+packages:
+  - name: chromium
+
+services:
+  - name: sshd
+    enabled: false    # Override base.yaml setting
+    runlevel: default
+
+users:
+  - name: testuser
+    groups: [wheel]  # Additional group

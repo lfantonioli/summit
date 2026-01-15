@@ -1,0 +1,6 @@
+# Common base configuration for integration tests
+# Contains configurations common to Alpine test environments
+
+ignored-configs:
+  - /etc/resolv.conf      # DNS resolver, managed by Docker/network in test environment
+  - /etc/apk/repositories # APK repository list, set by Alpine base image

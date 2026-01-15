@@ -1,0 +1,26 @@
+includes:
+  - common-base.yaml
+
+packages:
+  - name: htop
+  - name: curl
+  - name: vim
+
+configs:
+  - path: /etc/rollback_test.conf
+    content: |
+      This is a test configuration file
+      for rollback testing purposes.
+    mode: "0644"
+    owner: root
+    group: root
+  - path: /tmp/rollback_temp.txt
+    content: "Temporary test file"
+
+services:
+  - name: sshd
+    enabled: true
+    runlevel: default
+  - name: crond
+    enabled: true
+    runlevel: default

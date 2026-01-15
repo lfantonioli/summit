@@ -1,0 +1,5 @@
+includes:
+  - b.yaml
+
+packages:
+  - name: circular-a

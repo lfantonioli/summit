@@ -1,0 +1,8 @@
+packages:
+  - name: htop
+
+configs:
+  - path: /etc/motd
+    content: |
+      Welcome to a Summit-managed system!
+      Have a great day.

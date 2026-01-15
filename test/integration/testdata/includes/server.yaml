@@ -1,0 +1,8 @@
+packages:
+  - name: nginx
+  - name: postgresql
+
+services:
+  - name: nginx
+    enabled: true
+    runlevel: default

@@ -1,0 +1,11 @@
+includes:
+  - common-base.yaml
+
+users:
+  - name: "testuser1"
+    groups:
+      - "wheel"
+      - "storage" # This group will need to be created
+  - name: "testuser2"
+    groups:
+      - "video"

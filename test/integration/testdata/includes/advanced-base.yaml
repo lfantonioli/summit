@@ -1,0 +1,18 @@
+packages:
+  - name: git
+
+users:
+  - name: devuser
+    groups: [users]
+
+ignored-configs:
+  - "/etc/conf.d/*.conf"
+  - "/etc/local.d/*.start"
+
+user-packages:
+  - user: devuser
+    pipx:
+      - black
+      - flake8
+    npm:
+      - eslint

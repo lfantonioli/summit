@@ -1,0 +1,12 @@
+includes:
+  - ../base.yaml
+  - ../server.yaml
+  - ../../common-base.yaml
+
+# Host-specific additions
+packages:
+  - name: haproxy
+
+configs:
+  - path: /etc/server-specific.conf
+    content: "Server-specific configuration"
